@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ML Mentor</string>
+    <string name="toolbar_title">ML Mentor</string>
+    <string name="toolbar_subtitle">Domain-Specific Educational Mentor</string>
+    <string name="welcome_title">Hello! I\'m your ML Mentor 👋</string>
+    <string name="welcome_subtitle">Ask me anything about Machine Learning, from basic concepts to advanced algorithms and evaluation metrics.</string>
+    <string name="input_hint">Ask a Machine Learning question…</string>
+    <string name="clear_chat">Clear Chat</string>
+    <string name="confirm_clear_title">Clear Chat History?</string>
+    <string name="confirm_clear_msg">Are you sure you want to clear all conversation messages?</string>
+    <string name="yes">Clear</string>
+    <string name="cancel">Cancel</string>
+    <string name="chip_1">What is Machine Learning?</string>
+    <string name="chip_2">Explain Supervised Learning</string>
+    <string name="chip_3">What is Overfitting?</string>
+    <string name="chip_4">Explain Random Forest in detail</string>
+    <string name="chip_5">ML vs Deep Learning</string>
+    <string name="typing_status">ML Mentor is thinking…</string>
+</resources>

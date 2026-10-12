@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_bg">
+
+    <!-- Main Chat Screen Container -->
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cream_bg"
+        android:orientation="vertical">
+
+        <!-- Top Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/cream_toolbar"
+            android:elevation="2dp"
+            app:titleTextColor="@color/text_dark_brown">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingEnd="16dp">
+
+                <!-- Hamburger Menu Icon (☰ - Exactly 3 horizontal lines) -->
+                <ImageView
+                    android:id="@+id/btnOpenDrawer"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Open Sidebar"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_hamburger"
+                    app:tint="@color/text_dark_brown" />
+
+                <!-- App Avatar & Title -->
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="12dp"
+                    android:contentDescription="App Icon"
+                    android:src="@drawable/ic_bot_avatar" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/toolbar_title"
+                    android:textColor="@color/text_dark_brown"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <!-- Welcome Header View -->
+        <LinearLayout
+            android:id="@+id/layoutWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cream_bg"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_title"
+                android:textColor="@color/text_dark_brown"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/welcome_subtitle"
+                android:textColor="@color/text_muted_brown"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Chat Messages RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvChat"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/cream_bg"
+            android:clipToPadding="false"
+            android:paddingVertical="8dp" />
+
+        <!-- Attachment Preview Container (Above Input Bar) -->
+        <include layout="@layout/item_attachment_preview" />
+
+        <!-- Bottom Message Input Bar (ChatGPT Style: + | Ask anything... | ➤) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cream_toolbar"
+            android:elevation="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp">
+
+            <!-- "+" Attachment Button -->
+            <ImageView
+                android:id="@+id/btnAttach"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="12dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Attach File"
+                android:padding="4dp"
+                android:src="@drawable/ic_add"
+                app:tint="@color/text_muted_brown" />
+
+            <!-- Rounded Text Input Field -->
+            <EditText
+                android:id="@+id/etMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="message"
+                android:background="@drawable/bg_input_box"
+                android:hint="Ask anything about Machine..."
+                android:imeOptions="actionSend"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="4"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp"
+                android:textColor="@color/text_dark_brown"
+                android:textColorHint="@color/text_muted"
+                android:textSize="14sp" />
+
+            <!-- Circular Send Button on the Right -->
+            <ImageButton
+                android:id="@+id/btnSend"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/bg_send_button"
+                android:contentDescription="Send Message"
+                android:elevation="2dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_send"
+                app:tint="@color/text_dark_brown" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Left Navigation Drawer Sidebar -->
+    <include layout="@layout/nav_drawer_sidebar" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dark_surface"
+        app:title="Create ML Diagram"
+        app:titleTextColor="@color/text_white" />
+
+    <EditText
+        android:id="@+id/etPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints="description"
+        android:background="@drawable/bg_input_box"
+        android:gravity="top|start"
+        android:hint="e.g. Create a neural network diagram with 3 layers..."
+        android:padding="12dp"
+        android:textColor="@color/text_white"
+        android:textColorHint="@color/text_muted"
+        android:textSize="14sp"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnGenerate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Generate Diagram" />
+
+</LinearLayout>

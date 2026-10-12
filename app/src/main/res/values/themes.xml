@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application warm cream theme. -->
+    <style name="Base.Theme.MLApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/text_dark_brown</item>
+        <item name="colorSecondary">@color/text_muted_brown</item>
+        <item name="android:statusBarColor">@color/cream_toolbar</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/cream_bg</item>
+    </style>
+
+    <style name="Theme.MLApp" parent="Base.Theme.MLApp" />
+</resources>

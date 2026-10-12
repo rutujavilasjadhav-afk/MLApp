@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dark_surface"
+        app:title="Python &amp; ML Code Workspace"
+        app:titleTextColor="@color/text_white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="from sklearn.svm import SVC\nmodel = SVC(kernel='linear')\nmodel.fit(X_train, y_train)"
+        android:textColor="#38BDF8"
+        android:textSize="14sp" />
+
+</LinearLayout>
